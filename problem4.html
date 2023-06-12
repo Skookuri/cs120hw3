@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>Problem 4</title>
+<style>
+</style>
+</head>
+<body>
+<h1>homework time</h1>
+<h2>Links:</h2>
+<p>Problem 4</p>
+
+<p id="rangeList"></p>
+<p id="sumDisp"></p>
+<script>
+let rangeSentence;
+let range1 = prompt("Enter a number:");
+let range2 = prompt("Enter another number:");
+const oddRange = [];
+let counter = 0;
+let sum = 0;
+
+range1 = parseInt(range1);
+range2 = parseInt(range2);
+
+if (isNaN(range1) || range1 === "" || isNaN(range2) || range2 === "") {
+	rangeSentence = "No odd numbers to display";
+} else {
+	const lowerNum = Math.min(range1, range2);
+	const upperNum = Math.max(range1, range2);
+	let i = lowerNum;
+
+	while (i <= upperNum) {
+		if (Math.abs(i % 2) === 1) {
+			oddRange[counter] = i;
+			counter++;
+    	}
+        
+        sum = sum + i;
+    
+		i++;
+  	}
+
+  	if (oddRange.length === 0) {
+    	rangeSentence = "No odd numbers to display";
+  	} else {
+    	rangeSentence = "Sum: " + sum + "<br>" + "Odd numbers: " + oddRange.join(", ");
+  	}
+}
+
+document.getElementById("rangeList").innerHTML = rangeSentence;
+</script>
+</body>
+</html>
