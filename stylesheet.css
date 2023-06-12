@@ -1,0 +1,44 @@
+	body {
+    	background-color: #3D3B8E;
+        color: #E072A4;
+    }
+    
+    a {
+    	color: #E072A4;
+        text-decoration: none;
+    } 
+    
+    li {
+        padding: 20px;
+        font-size: 30px;
+        border-radius: 67px;
+		background: linear-gradient(145deg, #413f98, #373580);
+		box-shadow:  5px 5px 10px #29285f,
+             -5px -5px 10px #514ebd;
+    }
+    
+    
+    li:hover {
+		background: linear-gradient(145deg, #373580, #413f98);
+    }
+    
+    ul {
+		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    ul li {
+    	margin-bottom: 50px;
+    }
+    
+    div {
+    	position: relative;
+    }
+    
+    h2 {
+    	margin-bottom: 70px;	
+    }
