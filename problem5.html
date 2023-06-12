@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<title>Problem 5</title>
+<style>
+</style>
+</head>
+<body>
+<h1>homework time</h1>
+<h2>Links:</h2>
+<p>Problem 5</p>
+
+<p id="timesList"></p>
+<script>
+let timesNumber = prompt("Enter a number to get its times table");
+timesNumber = parseInt(timesNumber);
+let productSentence = "";
+
+window.onload = function() {
+  timesTable(timesNumber);
+  
+  if (isNaN(timesNumber)) {
+  	productSentence = "Valid number not entered";
+  }
+  document.getElementById("timesList").innerHTML = productSentence;
+};
+
+function timesTable(n) {
+  let i = 1;
+  while (i <= 12) {
+    let product = i * n;
+    productSentence += "<br>" + n + " x " + i + " = " + product;
+    i++;
+  }
+}
+</script>
+</body>
+</html>
