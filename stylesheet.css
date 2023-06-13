@@ -46,6 +46,11 @@
         padding: 10px;
     }
     
+    h1:hover a {
+    	color: #fff;
+        transition: 0.3s;
+    }
+    
     h2 {
     	margin-bottom: 50px;
         text-align: center;
